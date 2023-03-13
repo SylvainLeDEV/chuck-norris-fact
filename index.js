@@ -1,9 +1,11 @@
-document.getElementById('numberFact').textContent += dataChuckNorris.length.toLocaleString()
 const bubble = document.getElementById('bubble')
 const bubbleContent = document.getElementById('content')
 
 import("./assets/data/data.js")
     .then(module => {
+        const dataChuckNorris = module.dataChuckNorris
+        document.getElementById('numberFact').textContent += dataChuckNorris.length.toLocaleString()
+
         function handleClick() {
             let usedElements = [];
             let randomElement;
