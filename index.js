@@ -11,11 +11,9 @@ import("./assets/data/data.js")
             let randomElement;
             do {
                 const randomIndex = Math.floor(Math.random() * dataChuckNorris.length)
-                console.log(randomIndex)
                 randomElement = dataChuckNorris[randomIndex]
             } while (usedElements.has(randomElement))
             usedElements.add(randomElement);
-            console.log(usedElements.size)
             if (usedElements.size > 200) {
                 usedElements.delete(usedElements.values().next().value)
             }
