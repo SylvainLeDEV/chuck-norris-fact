@@ -15,12 +15,12 @@ import("./assets/data/data.js")
                 randomElement = dataChuckNorris[randomIndex]
             } while (usedElements.has(randomElement))
             usedElements.add(randomElement);
-            if (usedElements.size > 15) {
+            console.log(usedElements.size)
+            if (usedElements.size > 200) {
                 usedElements.delete(usedElements.values().next().value)
             }
             bubbleContent.textContent = randomElement;
         }
-
         bubble.addEventListener("click", handleClick)
     })
     .catch(error => {
