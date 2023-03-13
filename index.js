@@ -6,8 +6,9 @@ import("./assets/data/data.js")
         const dataChuckNorris = module.dataChuckNorris
         document.getElementById('numberFact').textContent += dataChuckNorris.length.toLocaleString()
 
+        let usedElements = [];
+
         function handleClick() {
-            let usedElements = [];
             let randomElement;
             do {
                 const randomIndex = Math.floor(Math.random() * dataChuckNorris.length)
