@@ -1,6 +1,4 @@
 document.getElementById('numberFact').textContent += dataChuckNorris.length.toLocaleString()
-import {dataChuckNorris} from '/assets/data/data.js'
-
 const bubble = document.getElementById('bubble')
 const bubbleContent = document.getElementById('content')
 
