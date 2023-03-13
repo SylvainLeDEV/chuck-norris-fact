@@ -7,8 +7,8 @@ async function startScrapping() {
     let data = [];
     let pageNumber = 1;
     while (pageNumber <= 527) {
-        await page.goto('http://chucknorrisfacts.fr/facts/' + pageNumber, {waitUntil: "networkidle0"});
         console.log("Open page number " + pageNumber)
+        await page.goto('http://chucknorrisfacts.fr/facts/top/'+pageNumber, {waitUntil: "networkidle2"});
         let newData = await page.evaluate(() => {
             const elements = document.querySelectorAll('.card-text')
             let texts = [];
@@ -26,7 +26,7 @@ async function startScrapping() {
         pageNumber++
     }
     const dataString = `export const dataChuckNorris = ${JSON.stringify(data)};`;
-    fs.writeFile('data.js', dataString, (err) => {
+    fs.writeFile('./assets/data/data.js', dataString, (err) => {
         if (err) throw err;
     })
     await browser.close()
