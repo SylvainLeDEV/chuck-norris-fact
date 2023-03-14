@@ -1,6 +1,7 @@
-body{
+body {
     background-color: #faf4ef;
 }
+
 .bubble-container {
     display: flex;
     justify-content: center;
@@ -10,9 +11,7 @@ body{
 
 #bubble {
     width: 70vw;
-    height: 50vw;
     max-width: 600px;
-    max-height: 100px;
     border-radius: 10px;
     background-color: #3498db;
     padding: 25px 40px;
@@ -26,6 +25,9 @@ body{
     cursor: pointer;
     transition: 0.2s;
 }
+
 #bubble:hover {
     transform: scale(1.01);
 }
+
+
