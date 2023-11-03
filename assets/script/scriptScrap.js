@@ -32,4 +32,5 @@ async function startScrapping() {
     await browser.close()
     console.log("Browser is close")
 }
+
 startScrapping()
